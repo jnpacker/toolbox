@@ -1,6 +1,5 @@
 # This script will remove Windows Packages in the array
-
-
+# ToDo: Externalize the array to a configuration file or YAML
 
 $packages = @(
     "*microsoft.windowscommunicationsapps*",
@@ -15,7 +14,8 @@ log "#############################################"
 log ("# Found " + $packages.length + " packages to disable")
 #Loop through the package array and disable them
 foreach ($package in $packages) {
-    Get-AppxPackage $package | Remove-AppxPackage
+    log ("# - Removing " + $package)
+    Get-AppxPackage -allusers $package | Remove-AppxPackage
 }
 log "# Finished"
 log "#############################################"

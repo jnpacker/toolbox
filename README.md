@@ -12,6 +12,6 @@ Set-ExecutionPolicy RemoteSigned
 5. Execute the script .\windows10-disable-apps.ps1
 6. Run the following command to disable scripts:
 ```
-Set-ExecutionPolicy Restricted 
+Set-ExecutionPolicy Restricted
 ```
 7. Choose `[A] Yes to All`
